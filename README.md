@@ -13,7 +13,7 @@ HTML, CSS and Javascript
 
 # Project Setup
 1. Open the HTML file
-<li>Open 'index.htm' in your web browser</li>
+<li>Open 'index.htm' in your web browser or you can also download the raw file on the top right corner</li>
 
 # Code explanation
 
