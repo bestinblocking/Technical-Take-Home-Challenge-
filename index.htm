@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Take-Home Challenge: Universal Color Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        div#result {
+            padding-top: 20px;
+            font-size: 18px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .hex {
+            font-weight: bold;
+     
+        }
+    </style>
+</head>
+<body>
+    <h1>Translate Color Name to Hex Code</h1>
+    <input type="text" id="colorName" placeholder="Enter color name"> 
+    <button onclick="getHexCode()">Get Hex Code</button>
+    <div id="result"></div>
+
+    <script>
+	/* Javascript */
+        var colorToHex = {
+            "red": "#FF0000",
+            "green": "#00FF00",
+            "blue": "#0000FF"
+ 
+        };
+
+        function getHexCode() {
+            
+            var colorName = document.getElementById('colorName').value.trim().toLowerCase(); 
+            var resultDiv = document.getElementById('result');
+            
+            if (colorName === "") {
+                resultDiv.innerHTML = '<span class="error">You must not leave the field blank.</span>';
+            } else {
+                var hexCode = colorToHex[colorName];
+                if (hexCode) {
+                    resultDiv.innerHTML = 'The hex code for <strong>' + colorName + '</strong> is <span class="hex" style="color: ' + hexCode + ';">' + hexCode + '</span>.';
+                } else {
+                    resultDiv.innerHTML = 'The color <strong>' + colorName + '</strong> was <span class="error">not found</span>.';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
