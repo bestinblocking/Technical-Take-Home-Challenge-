@@ -20,6 +20,7 @@ HTML, CSS and Javascript
 <li>colorToHex: A var created to map color names to their respective hex codes</li>
 <li>getHexCode: A Function that retrieves user input from the text field </li>
 <li>The .value.trim() line removes leading and trailing whitesapce and retrives the current value of an input field , if this line was not added, an error message would appear "The color [object HTMLInputElement] was not found"</li>
+<li>The .toLowerCase() line allows the color name input to be case-insensitive so that users can type "Red", "RED", or any other variation.</li>
 <li>Checks if the input is empty and shows an error message if so</li>
 <li>Looks up the hex code in the variable colorToHex to display the result or an error message if the color is not found</li>
 
