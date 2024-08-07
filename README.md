@@ -11,5 +11,26 @@ HTML, CSS and Javascript
 <li>CSS: styling and layout of the page</li>
 <li>Javascript: Functionality of variables and to handle input and output</li>
 
+# Project Setup
+1. Open the HTML file
+<li>Open 'index.htm' in your web browser</li>
+
+# Code explanation
+
+<li>colorToHex: A var created to map color names to their respective hex codes</li>
+<li>getHexCode: A Function that retrieves user input from the text field </li>
+<li>The .value.trim() line removes leading and trailing whitesapce and retrives the current value of an input field , if this line was not added, an error message would appear "The color [object HTMLInputElement] was not found"</li>
+<li>Checks if the input is empty and shows an error message if so</li>
+<li>Looks up the hex code in the variable colorToHex to display the result or an error message if the color is not found</li>
+
+# How to use 
+1. Enter color name : Red, Green, Blue
+2. Click the Get hex code button
+3. View result
+<li>The hex code will display below the button</li>
+<li>If the input is blank or the color is not found, an error message will be shown</li>
+   
+
+
 
 
